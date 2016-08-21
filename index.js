@@ -12,11 +12,12 @@ if (!databaseUri) {
 }
 
 var api = new ParseServer({
-  databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
+  databaseURI: databaseUri || 'mongodb://mabz:awesome@ds040898.mlab.com:40898/swaziflicks',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
-  appId: process.env.APP_ID || 'myAppId',
-  masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
+  appId: process.env.APP_ID || 'mQsdXQ5Y2zeZXwA48ZhZQ3HW09UlfxtO3TRX2hLr',
+  masterKey: process.env.MASTER_KEY || 'LRLyodVp5aqJu4zsmm3hkZToJVYNtYlSXcZRwHMV', //Add your master key here. Keep it secret!
   serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed
+fileKey: '46b9abec-5ad9-46d3-bb39-11802b65cdaa',
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
   }
