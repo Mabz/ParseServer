@@ -12,11 +12,11 @@ if (!databaseUri) {
 }
 
 var api = new ParseServer({
-  databaseURI: databaseUri || 'mongodb://mabz:awesome@ds040898.mlab.com:40898/swaziflicks',
+  databaseURI: databaseUri || '',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
-  appId: process.env.APP_ID || 'mQsdXQ5Y2zeZXwA48ZhZQ3HW09UlfxtO3TRX2hLr',
-  masterKey: process.env.MASTER_KEY || 'LRLyodVp5aqJu4zsmm3hkZToJVYNtYlSXcZRwHMV', //Add your master key here. Keep it secret!
-  serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed
+  appId: process.env.APP_ID || '',
+  masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
+  serverURL: process.env.SERVER_URL || '',  // Don't forget to change to https if needed
 fileKey: '46b9abec-5ad9-46d3-bb39-11802b65cdaa',
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
@@ -37,7 +37,7 @@ app.use(mountPath, api);
 
 // Parse Server plays nicely with the rest of your web routes
 app.get('/', function(req, res) {
-  res.status(200).send('I dream of being a website.  Please star the parse-server repo on GitHub!');
+  res.status(200).send('I dream of being a website. I dream of going Ligit');
 });
 
 // There will be a test page available on the /test path of your server url
